@@ -1,0 +1,48 @@
+Name: ns=33;GVL_MainMachine
+Id: ns=33;s=plc/app/Application/sym/GVL_MainMachine
+Type: FolderType
+DisplayName: {"LocaleId":"","Text":"GVL_MainMachine"}
+Description: {"LocaleId":"","Text":"Folder"}
+ReferenceType: Organizes
+Children:
+- Name: ns=29;fbMainMachine_gb
+  Id: ns=29;s=plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb
+  Type: BaseDataVariableType
+  DataType: BaseDataType
+  DisplayName: {"LocaleId":"","Text":"fbMainMachine_gb"}
+  ReferenceType: Organizes
+  ValueRank: Any
+  Children:
+  - Name: ns=29;Userdata
+    Id: ns=29;s=plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata
+    Type: BaseDataVariableType
+    DataType: TE_USERDATA_MAINMACHINE
+    DisplayName: {"LocaleId":"","Text":"Userdata"}
+    ReferenceType: Organizes
+    Children:
+    - Name: ns=29;IO
+      Id: ns=29;s=plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO
+      Type: BaseDataVariableType
+      DataType: TE_IO_MAINMACHINE
+      DisplayName: {"LocaleId":"","Text":"IO"}
+      ReferenceType: Organizes
+      Children:
+      - Name: ns=29;MM_HMI_aiRecipeNum
+        Id: ns=29;s=plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum
+        Type: BaseDataVariableType
+        DataType: Int16
+        DisplayName: {"LocaleId":"","Text":"MM_HMI_aiRecipeNum"}
+        Description: {"LocaleId":"","Text":"Application.GVL_MainMachine.fbMainMachine_gb.Userdata.IO.MM_HMI_aiRecipeNum[1..6]"}
+        ReferenceType: Organizes
+        ValueRank: OneDimension
+        ArrayDimensions: [6]
+        Value: [1,2,3,4,5,6]
+      - Name: ns=29;MM_HMI_asRecipeName
+        Id: ns=29;s=plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_asRecipeName
+        Type: BaseDataVariableType
+        DataType: String
+        DisplayName: {"LocaleId":"","Text":"MM_HMI_asRecipeName"}
+        Description: {"LocaleId":"","Text":"Application.GVL_MainMachine.fbMainMachine_gb.Userdata.IO.MM_HMI_asRecipeName[1..6]"}
+        ReferenceType: Organizes
+        ValueRank: OneDimension
+        ArrayDimensions: [6]

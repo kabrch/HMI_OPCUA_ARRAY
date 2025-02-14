@@ -1,0 +1,929 @@
+Name: OPCUAClient1
+Id: g=ef9a3c95597e6a950888583854d5c544
+Type: OPCUAClient
+Children:
+- Name: ServerEndpointURL
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "opc.tcp://192.168.100.100:4840"
+- Name: MinimumMessageSecurityMode
+  Type: BaseDataVariableType
+  DataType: MessageSecurityModeEnum
+- Name: MinimumSecurityPolicy
+  Type: BaseDataVariableType
+  DataType: SecurityPolicyEnum
+- Name: UserIdentityType
+  Type: BaseDataVariableType
+  DataType: UserIdentityTypeEnum
+  Value: 1
+- Name: ConnectionStatus
+  Type: BaseDataVariableType
+  DataType: ConnectionStatusEnum
+  AccessLevel: Read
+- Name: ServerUri
+  Type: BaseDataVariableType
+  DataType: String
+  AccessLevel: Read
+- Name: Events
+  Type: BaseDataVariableType
+  DataType: EventsEnum
+  Value: 1
+- Name: RuntimeConfigurations
+  Type: BaseObjectType
+- Class: Reference
+  Target: ns=13;i=8
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=9
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=54
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=57
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=91
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=60
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=63
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=83
+  Direction: Forward
+- Class: Reference
+  Target: ns=13;i=75
+  Direction: Forward
+- Name: ApplicationName
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "FTOptixApplication@[Hostname]"
+- Name: Username
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "boschrexroth"
+- Name: Password
+  Type: BaseDataVariableType
+  DataType: Password
+  Value: "boschrexroth"
+- Name: Objects
+  Type: BaseObjectType
+  Children:
+  - Name: ns=33;Datalayer
+    Id: ns=33;i=2000
+    Type: FolderType
+    DisplayName: {"LocaleId":"","Text":"Datalayer"}
+    Children:
+    - File: plc/plc.yaml
+    - File: types/types.yaml
+  - Class: DataType
+    Name: ET_MACHINE_MODE
+    Id: ns=30;s=types/plc/app/Application/ET_MACHINE_MODE
+    Supertype: Application
+    EnumDefinition: 
+     {
+      "Name": "ET_MACHINE_MODE",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/ET_MACHINE_MODE",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "et_Undefined",
+        "Value": 0,
+        "DisplayName": {
+         "LocaleId": "",
+         "Text": "et_Undefined"
+        }
+       },{
+        "Name": "et_Manual",
+        "Value": 10,
+        "DisplayName": {
+         "LocaleId": "",
+         "Text": "et_Manual"
+        }
+       },{
+        "Name": "et_Home",
+        "Value": 20,
+        "DisplayName": {
+         "LocaleId": "",
+         "Text": "et_Home"
+        }
+       },{
+        "Name": "et_Auto",
+        "Value": 30,
+        "DisplayName": {
+         "LocaleId": "",
+         "Text": "et_Auto"
+        }
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"ET_MACHINE_MODE"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;EnumStrings
+      Id: ns=32;s=types/plc/app/Application/ET_MACHINE_MODE
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"EnumStrings"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"LocaleId":"","Text":"et_Undefined"},{"LocaleId":"","Text":"et_Manual"},{"LocaleId":"","Text":"et_Home"},{"LocaleId":"","Text":"et_Auto"}]
+  - Class: DataType
+    Name: app
+    Id: ns=30;s=types/plc/app
+    Supertype: plc
+    DisplayName: {"LocaleId":"","Text":"app"}
+  - Class: DataType
+    Name: Application
+    Id: ns=30;s=types/plc/app/Application
+    Supertype: app
+    DisplayName: {"LocaleId":"","Text":"Application"}
+  - Class: DataType
+    Name: TE_USERDATA_MAINMACHINE
+    Id: ns=30;s=types/plc/app/Application/TE_USERDATA_MAINMACHINE
+    Supertype: Application
+    StructDefinition: 
+     {
+      "Name": "TE_USERDATA_MAINMACHINE",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/TE_USERDATA_MAINMACHINE",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "IO",
+        "DataType": {
+         "Id": 24
+        }
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"TE_USERDATA_MAINMACHINE"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;Default Binary
+      Id: ns=31;s=types/plc/app/Application/TE_USERDATA_MAINMACHINE
+      Type: DataTypeEncodingType
+      ModellingRule: None
+      DisplayName: {"LocaleId":"","Text":"Default Binary"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ReferenceType: HasEncoding
+  - Class: DataType
+    Name: TE_IO_MAINMACHINE
+    Id: ns=30;s=types/plc/app/Application/TE_IO_MAINMACHINE
+    Supertype: Application
+    StructDefinition: 
+     {
+      "Name": "TE_IO_MAINMACHINE",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/TE_IO_MAINMACHINE",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "qxAuxReset_LT",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "qxAuxStart_LT",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "qxAuxStop_LT",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "REM_PB_Stop",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "REM_PB_Reset",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "REM_PB_Start",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Auto",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Home",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Homing",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Manual",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Start",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Stop",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Stopping",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_Reset",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_LT_PurgeActive",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Auto",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Home",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Manual",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Start",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Stop",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Reset",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_CycleStart",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_StartHomeAction",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_SelectProduct",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Purge",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_CountReset",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_DownstreamBypass",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_ReadyForAuto",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PurgeComplete",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_DryCycle",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_stControl",
+        "DataType": {
+         "Id": 24
+        }
+       },{
+        "Name": "MM_stStatus",
+        "DataType": {
+         "Id": 24
+        }
+       },{
+        "Name": "MM_eSelectedMode",
+        "DataType": {
+         "Id": 24
+        },
+        "Optional": true
+       },{
+        "Name": "MM_sStatus",
+        "DataType": {
+         "Id": 12
+        }
+       },{
+        "Name": "MM_xActive",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_xReady",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_xStarting",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_xRunning",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_xStopping",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_xWarning",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_xError",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_CaseRate",
+        "DataType": {
+         "Id": 10
+        },
+        "Optional": true
+       },{
+        "Name": "MM_ProductRate",
+        "DataType": {
+         "Id": 10
+        },
+        "Optional": true
+       },{
+        "Name": "value",
+        "DataType": {
+         "Id": 24
+        },
+        "ValueRank": "OneDimension",
+        "ArrayDimensions": [0],
+        "Optional": true
+       },{
+        "Name": "MM_HMI_ErrorBanner",
+        "DataType": {
+         "Id": 12
+        }
+       },{
+        "Name": "MM_HMI_ErrorReaction",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_asRecipeName",
+        "DataType": {
+         "Id": 12
+        },
+        "ValueRank": "OneDimension",
+        "ArrayDimensions": [0]
+       },{
+        "Name": "MM_HMI_aiRecipeNum",
+        "DataType": {
+         "Id": 4
+        },
+        "ValueRank": "OneDimension",
+        "ArrayDimensions": [0]
+       },{
+        "Name": "MM_HMI_iRecipeSelect",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_iRecipeSelectReq",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_iRecipeEdit",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_iRecipeEditReq",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_iRecipeDestination",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_iRecipeLoad",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_sRecipeActive",
+        "DataType": {
+         "Id": 12
+        }
+       },{
+        "Name": "MM_HMI_iRecipePage",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_HMI_T2MOnline",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeSelect",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeSave",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeLoad",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeEdit",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeCopy",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeDelete",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_RecipeCancel",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_ActiveRecipe",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "MM_StarvingTime",
+        "DataType": {
+         "Id": 12
+        }
+       },{
+        "Name": "ixMCR_OK",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "ixAirPressureOk",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "MM_PB_Abort",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "iEditOffs",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "iEditOffsOld",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "iEditPos",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "iEditPosOld",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "xPB_CopyPickPos",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "iPB_TransposeLayer",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "ixScannerError",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "ixScannerAlert",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "qxZoneStatus1",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "qxZoneStatus2",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "qxPerimeterStatus",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       },{
+        "Name": "qxCobotStatus",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"TE_IO_MAINMACHINE"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;Default Binary
+      Id: ns=31;s=types/plc/app/Application/TE_IO_MAINMACHINE
+      Type: DataTypeEncodingType
+      ModellingRule: None
+      DisplayName: {"LocaleId":"","Text":"Default Binary"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ReferenceType: HasEncoding
+  - Class: DataType
+    Name: ArrayOfST_HMI_ERROR
+    Id: ns=30;s=types/plc/app/Application/ArrayOfST_HMI_ERROR
+    Supertype: Application
+    StructDefinition: 
+     {
+      "Name": "ArrayOfST_HMI_ERROR",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/ArrayOfST_HMI_ERROR",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "value",
+        "DataType": {
+         "Id": 24
+        },
+        "ValueRank": "OneDimension",
+        "ArrayDimensions": [0],
+        "Optional": true
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"ArrayOfST_HMI_ERROR"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;Default Binary
+      Id: ns=31;s=types/plc/app/Application/ArrayOfST_HMI_ERROR
+      Type: DataTypeEncodingType
+      ModellingRule: None
+      DisplayName: {"LocaleId":"","Text":"Default Binary"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ReferenceType: HasEncoding
+  - Class: DataType
+    Name: ST_HMI_ERROR
+    Id: ns=30;s=types/plc/app/Application/ST_HMI_ERROR
+    Supertype: Application
+    StructDefinition: 
+     {
+      "Name": "ST_HMI_ERROR",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/ST_HMI_ERROR",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "udiErrorNumber",
+        "DataType": {
+         "Id": 7
+        },
+        "Optional": true
+       },{
+        "Name": "sErrorMessage",
+        "DataType": {
+         "Id": 12
+        }
+       },{
+        "Name": "iErrorReaction",
+        "DataType": {
+         "Id": 4
+        },
+        "Optional": true
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"ST_HMI_ERROR"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;Default Binary
+      Id: ns=31;s=types/plc/app/Application/ST_HMI_ERROR
+      Type: DataTypeEncodingType
+      ModellingRule: None
+      DisplayName: {"LocaleId":"","Text":"Default Binary"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ReferenceType: HasEncoding
+  - Class: DataType
+    Name: ST_PACKML_CONTROL
+    Id: ns=30;s=types/plc/app/Application/ST_PACKML_CONTROL
+    Supertype: Application
+    StructDefinition: 
+     {
+      "Name": "ST_PACKML_CONTROL",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/ST_PACKML_CONTROL",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "Start",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Stop",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Reset",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Abort",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Clear",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Hold",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Unhold",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Suspend",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "Unsuspend",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "StateComplete",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"ST_PACKML_CONTROL"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;Default Binary
+      Id: ns=31;s=types/plc/app/Application/ST_PACKML_CONTROL
+      Type: DataTypeEncodingType
+      ModellingRule: None
+      DisplayName: {"LocaleId":"","Text":"Default Binary"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ReferenceType: HasEncoding
+  - Class: DataType
+    Name: ST_PACKML_STATUS
+    Id: ns=30;s=types/plc/app/Application/ST_PACKML_STATUS
+    Supertype: Application
+    StructDefinition: 
+     {
+      "Name": "ST_PACKML_STATUS",
+      "DataType": {
+       "IdType": 1,
+       "Id": "types/plc/app/Application/ST_PACKML_STATUS",
+       "Namespace": 30
+      },
+      "Fields": [{
+        "Name": "xModeAuto",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xModeManual",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xModeHome",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xActive",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xReady",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xStarting",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xRuning",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xStoping",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xStopped",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xWarning",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       },{
+        "Name": "xError",
+        "DataType": {
+         "Id": 1
+        },
+        "Optional": true
+       }]
+     }
+    DisplayName: {"LocaleId":"","Text":"ST_PACKML_STATUS"}
+    Description: {"LocaleId":"","Text":"Type information"}
+    Children:
+    - Name: ns=0;Default Binary
+      Id: ns=31;s=types/plc/app/Application/ST_PACKML_STATUS
+      Type: DataTypeEncodingType
+      ModellingRule: None
+      DisplayName: {"LocaleId":"","Text":"Default Binary"}
+      Description: {"LocaleId":"","Text":"Type information"}
+      ReferenceType: HasEncoding

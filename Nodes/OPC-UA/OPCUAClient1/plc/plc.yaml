@@ -1,0 +1,27 @@
+Name: ns=33;plc
+Id: ns=33;s=plc
+Type: FolderType
+DisplayName: {"LocaleId":"","Text":"plc"}
+ReferenceType: Organizes
+Children:
+- Name: ns=33;app
+  Id: ns=33;s=plc/app
+  Type: BaseObjectType
+  DisplayName: {"LocaleId":"","Text":"app"}
+  ReferenceType: Organizes
+  Children:
+  - Name: ns=33;Application
+    Id: ns=33;s=plc/app/Application
+    Type: BaseObjectType
+    DisplayName: {"LocaleId":"","Text":"Application"}
+    Description: {"LocaleId":"","Text":"User applications"}
+    ReferenceType: Organizes
+    Children:
+    - Name: ns=33;sym
+      Id: ns=33;s=plc/app/Application/sym
+      Type: FolderType
+      DisplayName: {"LocaleId":"","Text":"sym"}
+      Description: {"LocaleId":"","Text":"Configured symbols of the plc application"}
+      ReferenceType: Organizes
+      Children:
+      - File: GVL_MainMachine/GVL_MainMachine.yaml

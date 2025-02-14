@@ -1,0 +1,61 @@
+Project:
+ Name: HMI_OPCUA_ARRAY_Design
+ ProjectNamespaceIndex: 8
+ Description: ''
+ Company: ''
+ Copyright: ''
+ FormatVersion: 1
+ ProductVersion: 1.5
+ CoreVersion: 4.0
+ Dependencies:
+  2:
+   Uri: HMI_OPCUA_ARRAY
+   RelativePath: HMI_OPCUA_ARRAY.optix
+  3:
+   Uri: 'urn:FTOptix:CoreBase'
+   Module: FTOptix.CoreBase
+   Version: 4.0
+  4:
+   Uri: 'urn:FTOptix:CoreBase:Net'
+   Module: FTOptix.CoreBase.Net
+   Version: 1.1
+  5:
+   Uri: 'urn:FTOptix:TagImporter'
+   Module: FTOptix.TagImporter
+   Version: 1.0
+  6:
+   Uri: 'urn:FTOptix:OPCUAImporter'
+   Module: FTOptix.OPCUAImporter
+   Version: 1.0
+  7:
+   Uri: 'urn:FTOptix:NetLogic'
+   Module: FTOptix.NetLogic
+   Version: 4.0
+  9:
+   Uri: 'ef9a3c95597e6a950888583854d5c544#http://www.boschrexroth.com/OpcUa/Datalayer'
+   ServerUri: ef9a3c95597e6a950888583854d5c544
+  10:
+   Uri: 'ef9a3c95597e6a950888583854d5c544#http://www.boschrexroth.com/OpcUa/DatalayerTypes'
+   ServerUri: ef9a3c95597e6a950888583854d5c544
+  11:
+   Uri: 'ef9a3c95597e6a950888583854d5c544#http://www.boschrexroth.com/OpcUa/DatalayerEncoding'
+   ServerUri: ef9a3c95597e6a950888583854d5c544
+  12:
+   Uri: 'ef9a3c95597e6a950888583854d5c544#http://www.boschrexroth.com/OpcUa/DatalayerEnumeration'
+   ServerUri: ef9a3c95597e6a950888583854d5c544
+  13:
+   Uri: 'ef9a3c95597e6a950888583854d5c544#http://www.boschrexroth.com/OpcUa/DatalayerObjects'
+   ServerUri: ef9a3c95597e6a950888583854d5c544
+ Statistics:
+  TotalNodeCount: 4
+  Objects: 1
+  ObjectTypes: 0
+  Variables: 3
+  VariableTypes: 0
+  DataTypes: 0
+  Methods: 0
+  References: 0
+  ReferenceTypes: 0
+  Files: 1
+ Nodes:
+ - File: 'DesignTimeNodes/OPC-UA/OPCUAClient1/TagImporter.yaml'

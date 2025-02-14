@@ -1,0 +1,12 @@
+Name: ns=33;types
+Id: ns=33;s=types
+Type: FolderType
+DisplayName: {"LocaleId":"","Text":"types"}
+ReferenceType: Organizes
+Children:
+- Class: DataType
+  Name: plc
+  Id: ns=30;s=types/plc
+  Supertype: Structure
+  DisplayName: {"LocaleId":"","Text":"plc"}
+  ReferenceType: Organizes

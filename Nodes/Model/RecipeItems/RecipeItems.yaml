@@ -1,0 +1,97 @@
+Name: RecipeItems
+Type: FolderType
+Children:
+- Name: RecipeItem1
+  Id: g=b6547dd5683f5985ff63a2b46514c487
+  Type: RecipeItem
+  Children:
+  - Name: PB_Select
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: PB_Edit
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Holder
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Number
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum"
+  - Name: Name
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_asRecipeName"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_asRecipeName"
+  - Name: Index
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 1
+- Name: RecipeItem2
+  Id: g=65e4ebe039e88f279b2ccaae50978383
+  Type: RecipeItem
+  Children:
+  - Name: PB_Select
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: PB_Edit
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Holder
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Number
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum"
+  - Name: Name
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/HMI_OPCUA_ARRAY/OPC-UA/OPCUAClient1/Objects/Datalayer/plc/app/Application/sym/GVL_MainMachine/fbMainMachine_gb/Userdata/IO/MM_HMI_aiRecipeNum"
+  - Name: Index
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 2

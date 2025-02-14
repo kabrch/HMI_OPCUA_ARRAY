@@ -1,0 +1,45 @@
+Name: Types
+Type: FolderType
+Children:
+- Name: RecipeItem
+  Id: g=13556ed49933892e735a9340a0ac1a64
+  Supertype: BaseObjectType
+  Children:
+  - Name: PB_Select
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: PB_Edit
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Holder
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Number
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Name
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Index
+    Type: BaseDataVariableType
+    DataType: Int16

@@ -1,0 +1,19 @@
+Name: LoginForm
+Type: FolderType
+Children:
+- Name: ns=15;LibraryReference
+  Type: ObjectLibraryReference
+  DataType: ObjectLibraryReferenceDataType
+  Value: 
+   {
+    "TypeId": {
+     "Id": 72,
+     "Namespace": 15
+    },
+    "Body": {
+     "libraryGuid": "de905a58759b4ff38bbb66c9d44c67ad",
+     "objectGuid": "64c3e1535979981f3ad5449b009a965c",
+     "objectVersion": 1,
+     "highestIgnoredVersion": 0
+    }
+   }
